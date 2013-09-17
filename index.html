@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no"/>
+  <title>还原"活"的设计 &middot; kejun</title>
+  <base target="_blank">
+  <link rel="apple-touch-icon-precomposed" href="">
+  <link rel="stylesheet" href="static/css/prism.css"  media="screen"/>
+  <link rel="stylesheet" href="static/css/slides.css" media="screen" />
+  <link rel="stylesheet" href="static/css/customiz.css" media="screen" />
+  <style media="print">
+   .no-support, iframe { display: none; }
+   .page { margin-bottom: 2em; }
+  </style>
+</head>
+<body>
+  <h1>还原"活"的设计 &middot; kejun </h1>
+<label class="bn-toggle-fullscreen">
+<input type="checkbox" class="toggle-fullscreen">
+全屏
+</label>
+<div class="page page-cover">
+<article style="background:#fff url(static/pics/bg.jpg) no-repeat 0 90%;background-size:100% auto;">
+<div class="page-cover-content">
+<div class="title">
+  还原"活"的设计<br><small>前端开发的核心价值</small> 
+</div>
+<div class="author"><a href="http://www.douban.com/people/listenpro/"><img src="http://img3.douban.com/icon/u1170308-32.jpg" width="24" alt=""></a>Kejun (@kejunz)</div>
+</div>
+</article>
+</div>
+
+<div class="page page-center">
+  <article>
+    <p><small>前端工程师的基本职责：</small><span class="text-mark1">还原设计</span><span class="slide-item" style="color:green;" data-action="$('.text-mark1').css({'text-decoration': 'line-through', 'color':'#ccc'})">还原"活"的设计</span>。
+  </article>
+</div>
+
+<div class="page">
+<article>
+  <h2>"活"的设计?</h2>
+  <p>误区: 设计师只关心工程师做出来的跟设计稿是否完全一致（追求像素级还原）
+  <p>在UCD中，更加强调交互设计重要性，视觉设计次之。设计稿能体现交互细节吗？能控制在开发环节中无损吗？最后能精确验证吗？NO
+  <p>设计阶段产出物是原型。原型比设计稿更生动，更能表达设计。
+  <p>设计过程：IA/Wireframe > 交互/Prototype > 视觉/UI Spec
+  <p>这并非是新的观念。但不容易做好。原因是缺乏共同追求的目标和具体协作方式。都在各自的圈子里自得其乐。
+  <p>所谓"活"的设计，它超越了狭隘的静态展现的设计问题。同时引出更多更有意义的设计问题，真正做到UCD。是设计师值得追求的。
+  <p>还原"活"的设计的过程，背后是诸多技术和工程问题。是前端工程师值得追求的。
+  <p>前端工程师的职责：参与交互设计、提供专业建议、保证合理性、平衡开发成本、最后还原所有细节。
+</article>
+</div>
+
+<div class="page">
+  <article>
+    <h2>"活"的设计?</h2>
+    <div class="slide-item">
+    <p><a href="http://zh.wikipedia.org/wiki/%E7%94%9F%E5%91%BD">生命体基本特征</a>的类比：
+    <ol class="list-1">
+      <li>体内平衡 &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">能灵活适配内容的变化。文字长度、图片尺寸等各种可能情况</span></li>
+      <li>组织性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">由UI元素构成(原子设计、卡片设计)</span></li>
+      <li>新陈代谢 &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">新的UI元素不断替代旧的元素</span></li>
+      <li>生长&emsp;&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">由最小可用的形态，不断迭代，持续完善</span></li>
+      <li>适应性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">能适应用户使用环境(响应式设计, RWD)</span></li>
+      <li>反应性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">响应用户各种操作（mouse、keyboard、touch、gesture），拥有各种状态(错误、失效、等待、处理...)</span></li>
+      <li>繁殖&emsp;&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">基于现有的设计系统之上，快速构建新的产品原型</span></li>
+    </ol>
+    </div>
+    <p class="slide-item">"活"的设计是具有灵活性，有组织有秩序，能适配用户的使用环境、响应的用户行为。可扩展、可继承的设计。
+    <p class="slide-item">进而推导出"活"的设计4大基本特性: (展现上的)适配性、响应性、(UI元素的)组织性、系统性。
+  </article>
+</div>
+
+
+
+<div class="page">
+  <article>
+  <h2></h2>
+  <div class="figure slide-item"><img src="static/pics/html_1_1.jpg"/></div>
+  <div class="figure slide-item"><span class="subtitle">Step 1. 解构元素 - 每个元素的属性就是元素的规格? 大小、Color...</span><img src="static/pics/html_1_2.jpg"/></div>
+  <div class="figure slide-item"><span class="subtitle">Step 2. 解构结构 - 结构的规格? 间距(margin)、留白(padding)、边界</span><img src="static/pics/html_1_3.jpg"/></div>
+  <div class="figure slide-item"><span class="subtitle">Step 3. 组合</span><img src="static/pics/html_1_5.gif"/></div>
+  </article>
+</div>
+
+
+
+
+<div class="page">
+  <article>
+  <h2>标注(1) - 设计师和前端工程师的沟通工具</h2>
+  <div class="figure slide-item"><img src="static/pics/html_1_1.jpg"/></div>
+  <div class="figure slide-item"><span class="subtitle">Step 1. 解构元素 - 每个元素的属性就是元素的规格? 大小、Color...</span><img src="static/pics/html_1_2.jpg"/></div>
+  <div class="figure slide-item"><span class="subtitle">Step 2. 解构结构 - 结构的规格? 间距(margin)、留白(padding)、边界</span><img src="static/pics/html_1_3.jpg"/></div>
+  <div class="figure slide-item"><span class="subtitle">Step 3. 组合</span><img src="static/pics/html_1_5.gif"/></div>
+  </article>
+</div>
+
+
+<div class="page">
+<article>
+<h2>暴露细节</h2>
+<iframe src="http://result.dabblet.com/gist/6577711/c8511563b5e44bd78bb331f8179649af3f0ce441" frameBorder="0" width="500" height="350"></iframe>
+<p>图片展现
+</article>
+</div>
+
+
+
+<div class="page">
+  <article>
+  <h2>标注(2) - 转换</h2>
+  <div class="figure slide-item"><img src="static/pics/html_1_1_2.jpg"/></div>
+  <div class="slide-item">
+  CSS3的语法：
+  <pre><code class="language-css">.sampl1 { box-shadow:0 1px 20px rgba(0, 0, 0, .75); }</code></pre>
+  </div>
+  <p class="slide-item">"Preprocessors are the rosetta stone between Designers & Developers" 出自 Tim Hettler - CSSConf 2013 <a href="http://timhettler.github.io/cssconf-2013/#!/0" target="_blank">http://timhettler.github.io/cssconf-2013/</a>
+  <p class="slide-item">消除障碍，将设计师的语言转换成工程师的语言。
+  <div class="slide-item">
+SCSS:
+  <pre><code class="language-css">.sampl1 { @include rs-box-shadow(#000, .75, 120, 5, 0, 10); }</code></pre>
+  <iframe src="http://cdpn.io/rjDnA" frameborder="0" width="100%" height="300"></iframe>
+  </div>
+  </article>
+</div>
+
+
+
+<div class="page">
+  <article>
+  <h2>标注(2) - CSS3视觉效果的标注</h2>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+  <div class="page">
+  <article>
+    <h2>用户使用环境 - “生长”的环境</h2>
+    <div class="figure slide-item">
+      <span class="subtitle">1. 浏览器</span>
+      <img src="static/pics/figure.1.png" alt="" />
+    </div>
+
+    <div class="figure slide-item">
+      <span class="subtitle">2. 操作系统</span>
+      <img src="static/pics/figure.2.png" alt="" />
+    </div>
+
+    <div class="figure slide-item">
+      <span class="subtitle">3. 屏幕分辨率</span>
+      <img src="static/pics/figure.3.png" alt="" />
+    </div>
+
+    <div class="figure slide-item">
+      <span class="subtitle">4. 移动端流量</span>
+      <img src="static/pics/figure.4.png" alt="" />
+    </div>
+
+    <div class="figure slide-item">
+      <span class="subtitle">移动端设备</span>
+      <img src="static/pics/figure.5.png" alt="" />
+    </div>
+  </article>
+  </div>
+
+  <div class="page">
+    <article>
+    <h2>认识网页</h2>
+    <p>option + cmd + i
+    <p>1. 文档声明
+    <p>2. 文档属性 （head）
+    <p>3. 文档内容 （body）
+    <p>关键理解原理、掌握开发思路
+    </article>
+  </div>
+
+  <div class="page">
+    <article>
+    <h2>理解开发思路："描述"式 vs. "绘制"式</h2>
+    <p class="slide-item">标记 + 样式 ＋ 效果 + 行为。特点: 分离，层层叠加
+    <div class="figure slide-item">
+      <a href=""></a>
+      <img src="static/pics/figure.8.jpg" alt="" />
+      <br><small>(http://farm1.staticflickr.com/216/504059448_03f09eb9c8.jpg)</small>
+    </div>
+    <p class="slide-item">
+    标记：HTML <span class="slide-item" style="color:blue">(内容元素)</span><br>
+    样式、效果：CSS <span class="slide-item" style="color:blue">(视觉风格、过渡、动画)</span><br>
+    行为：Javascript <span class="slide-item" style="color:blue">(响应用户操作)</span><br>
+    <div class="figure slide-item">
+      <img src="static/pics/figure.7.jpg"><br>Living Divani "Bolle" stool
+    </div>
+    <p class="slide-item">
+    开发的过程是一步一步的：标记要展现的内容 > 风格化 > 响应用户行为 > （还可以再NB一些... 向前兼容) 
+    </article>
+  </div>
+
+
+  <div class="page">
+    <article>
+    <h2>HTML - HyperText Markup Language (超文本标记语言, 很酷的名字!)</h2>
+    <p>Q: 标记什么？
+    <p class="slide-item">内容元素(elements)和UI结构(structure)
+    <p class="slide-item">so, 查看网页的源文件，清晰的界定<em>元素</em>和<em>结构</em> (也是看源代码的思路)。
+
+<div class="slide-item">
+  标记元素的标签有哪些(<a href="http://www.w3.org/TR/html401/" target="_blank">HTML 4.01</a>)？
+<pre>
+标题：h1~h6
+段落:  p
+缩写:  abbr
+强调:  em
+引用:  blockquote / q / cite
+地址:  address
+表单:  form / fieldset / legend / label / button / input / select (optgroup / option) / textarea
+代码:  code / kbd / pre / samp / var
+表格:  table / caption / col / colgroup / thead / th / tbody / tr / td / tfoot
+定义:  dl / dt / dd / dfn
+媒体:  img / object / embed
+列表:  ul / ol / li
+</pre>
+</div>
+
+<div class="slide-item">
+标记结构的标签有哪些(<a href="http://www.w3.org/TR/html401/" target="_blank">HTML 4.01</a>)？
+<pre>
+容器:  div / span
+</pre>
+</div>
+
+<div class="slide-item">
+  步骤：先设计结构，再加入元素
+  <div class="figure slide-item"><span class="subtitle">Mockup</span><img src="static/pics/html_1_1.jpg"/></div>
+  <div class="figure slide-item"><span class="subtitle">解构元素 - 每个元素的属性就是元素的规格? 大小、Color...</span><img src="static/pics/html_1_2.jpg"/></div>
+  <div class="figure slide-item"><span class="subtitle">解构结构 - 结构的规格? 间距(margin)、留白(padding)、边界</span><img src="static/pics/html_1_3.jpg"/></div>
+  <div class="figure slide-item"><span class="subtitle">组合</span><img src="static/pics/html_1_5.gif"/></div>
+</div>
+
+<p class="slide-item">解构是抽象的过程。抽象是对问题更透彻的理解。(抽象能力是"大师"素质之一)
+
+    </article>
+  </div>
+
+  <div class="page">
+    <article>
+    <pre><code class="language-markup">&lt;div id="db-friends" class="mod">
+  &lt;h2>我的朋友们&lt;/h2>
+  &lt;div class="list">
+  &lt;ul>
+    &lt;li>
+    &lt;a href="http://www.douban.com/people/iqingfeng/">
+      &lt;img src="http://img3.douban.com/icon/u43045985-44.jpg" alt="一个马甲">
+      &lt;span class="name">一个马甲
+      &lt;/span>&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a href="http://www.douban.com/people/kingszar/">
+      &lt;img src="http://img3.douban.com/icon/u1373164-85.jpg" alt="Aray.S">
+      &lt;span class="name">Aray.S&lt;/span>
+    &lt;/a>
+    &lt;/li>
+  &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
+
+    <p class="slide-item">1. 标签的语义性。优先使用原生标签，不能表达意思时，借助命名(class, id)。如:span.name
+    <p class="slide-item">2. 标签的闭合，空标签标不用闭合
+    <p class="slide-item">3. 空标签：img / input / br / hr / link / meta
+    <p class="slide-item">4. 标签的属性。如：&lt;img <span style="color:blue">src</span>="<span style="color:green">http://img3.douban.com/icon/u1373164-85.jpg</span>" <span style="color:blue">alt</span>="<span style="color:green">Aray.S</span>"><br>
+    通用属性: id / class / title / lang / style / dir / accesskey / tabindex / contenteditable
+    <br>事件属性: onclick / onkeydown / oncontextmenu / ...more
+    <p class="slide-item">5. <a href="http://www.cs.tut.fi/~jkorpela/html/nesting.html" target="_blank">标签嵌套规则</a>,
+    如: a不能嵌套a, p不能嵌套div等。<a href="http://dabblet.com/gist/6277609" target="_blank">例1</a>
+    <p class="slide-item">6. 标记 == 对内容的抽象
+    </article>
+  </div>
+
+  <div class="page">
+    <article>
+    <h2>HTML和UI就是结构和形态的关系</h2>
+    <div class="figure slide-item">
+    <img src="static/pics/figure.9.jpg"/>
+    <br><small>石上纯也(设计师) / 小西泰孝(结构师)</small>
+    <br><small>via <a href="http://www.douban.com/photos/album/48002565/">一村的相册</a></small>
+    </div>
+    </article>
+  </div>
+
+
+<div class="page">
+<article>
+<h2>案例分析</h2>
+<div class="figure slide-item">
+<img src="static/pics/figure.10.png" alt="" />
+</div>
+<div class="figure slide-item">
+<img src="static/pics/figure.11.jpg" alt="" />
+</div>
+<div class="slide-item">
+<p>1. 代码复杂。简单清晰易维护
+<pre>
+<code class="language-markup">
+&lt;ul>
+% for tag in tags:
+&lt;li>&lt;a href="${tag.url}">${tag.name}&lt;/a>&lt;/li>
+% endfor
+&lt;/ul>
+</code>
+</pre>
+<p>复杂！
+<pre>
+<code class="language-markup">
+&lt;ul>
+% for (i, tag) in tags:
+% if i == len(tags) - 1:
+&lt;li>&lt;a href="${tag.url}">${tag.name}&lt;/a>&lt;/li>
+% elif i % 2 == 0:
+&lt;a href="${tag.url}">${tag.name}&lt;/a>&lt;/li>
+% else:
+&lt;li>&lt;a href="${tag.url}">${tag.name}&lt;/a>
+% endif
+% endfor
+&lt;/ul>
+</code>
+</pre>
+
+<p>2. UI的灵活性差。不满、意外折行...
+<p>3. 考虑由原子UI组成，组合有规律，达到合理性 
+</div>
+</article>
+</div>
+
+  <div class="page">
+    <article>
+    <h2>HTML review标准</h2>
+    <ul>
+      <li>标签用法 +2分</li>
+      <li>结构和元素一目了然 +3分</li>
+      <li>代码简洁 +2分</li>
+      <li>一致性、灵活性 +3分</li>
+    </ul>
+    </article>
+  </div>
+
+
+  <div class="page">
+    <article>
+    <h2>CSS - Cascading Style Sheets (层叠样式表)</h2>
+    <ul class="list">
+      <li>布局</li>
+      <li>视觉风格</li>
+      <li>动态效果</li>
+    </ul>
+    </article>
+  </div>
+
+<div class="page">
+    <article>
+       <h2>重新认识CSS语法</h2>
+     <div class="css-syntax">
+<code><i>.mod</i></code> <code><i>{</i>
+  <i>margin-bottom</i><i>:</i><i>30px</i><i>;</i>
+  <i>color</i><i>:</i><i>#666</i>
+<i>}</i></code>
+     </div>
+<ul class="list-1">
+<li>一条rule: 选择器 { 属性名: 属性值; } (声明体)
+<li class="slide-item">选择器: 
+<br>1. ID选择器 #xxx
+<br>2. 类选择器 .xxx
+<br>3. 标签选择器 div 
+<br>4. 属性选择器 [name], [name="xxx"], [name~='xxx'], ... 
+<br>5. 后继(Descendant)选择器 #xxx .xxx
+<br>6. 子选择器 #xxx > .xxx
+<br>7. 同级选择器 .xxx + .xx1, .xxx ~ .xx1
+<br>8. 伪类选择器 .xxx:hover
+<br>匹配顺序是从右向左: 想一想怎么写效率最高？
+<br>参考: <a href="http://www.w3.org/TR/CSS/#selectors" target="_blank">CSS的选择器</a>
+<li class="slide-item">命名: 
+    <br>1. 连接符-和_: 下划线在CSS1(1996), CSS2(1998)是非法的。CSS2.1(2001)变成合法的
+    <br>2. ID和类名区分大小写。标签名不区分大小写。统一小写
+    <br>3. CSS2以后命名支持Unicode
+<pre><code class="language-markup">&lt;div class="I❤Douban">content&lt;/div></code></pre>
+    <br>4. 不能用数字、双中划线开头
+<li class="slide-item">错误处理: 忽略无效，最近闭合
+<br>.mod的颜色？h1的颜色？
+<pre data-src="sample_css_1.css" class="language-css"></pre>
+<li class="slide-item"> AT-Rules:
+     <div class="css-syntax">
+<code><i>@media print</i></code> <code><i>{</i>
+<i>.mod</i> <i>{</i>
+  <i>margin-bottom</i><i>:</i><i>20pt</i><i>;</i>
+<i>}</i>
+<i>}</i></code>
+     </div>
+<p>@charset, @document, @font-face, @import, @keyframes, @media, @page, @supports
+</ul>
+    </article>
+  </div>
+
+<div class="page">
+<article>
+<h2>值和单位</h2>
+<ul class="list-1">
+<li class="slide-item">值: 字符串、关键字、数值（带/不带单位）、色值
+<pre><code class="language-css">position: absolute;
+content: "\0020";
+width: 590px;
+border: none;
+background:red url(http://img3.douban.com/pics/blank.gif) no-repeat 0 0;
+height:90%;
+line-height: 1.62;
+border-left:3px solid #eee;
+</code></pre>
+
+<li class="slide-item">单位：
+<table><colgroup><col><col><col><col>
+    </colgroup><thead>
+     <tr>
+      <th>
+      </th><th>Rec­om­mended
+      </th><th>Oc­ca­sional use
+      </th><th>Not rec­om­mended
+    </th></tr></thead><tbody>
+     <tr>
+      <th>Screen
+      </th><td>em, px, %
+      </td><td>ex
+      </td><td>pt, cm, mm, in, pc
+     </td></tr><tr>
+      <th>Print
+      </th><td>em, cm, mm, in, pt, pc, %
+      </td><td>px, ex
+      </td><td>
+   </td></tr></tbody></table>
+</ul>
+<p  class="slide-item">绝对单位:
+em, cm, mm, in, pt, pc, px
+<p class="slide-item">相对单位:
+%, em, ex, (ch, rem, vw, vh, vmin, vmax)
+<table class="data slide-item">
+   <caption>Informative Summary of Relative Units</caption>
+   <thead>
+    <tr>
+     <th>unit
+     </th><th>relative to
+   </th></tr></thead><tbody>
+    <tr>
+     <td>‘em’
+     </td><td>font size of the element
+    </td></tr><tr>
+     <td>‘ex’
+     </td><td><i>x-height</i> of the element's font
+    </td></tr><tr>
+     <td>‘ch’
+     </td><td>width of the "0" (ZERO, U+0030) glyph in the element's font
+    </td></tr><tr>
+     <td>‘rem’
+     </td><td>font size of the root element
+    </td></tr><tr>
+     <td>‘vw’
+     </td><td>1% of viewport's width
+    </td></tr><tr>
+     <td>‘vh’
+     </td><td>1% viewport's height
+    </td></tr><tr>
+     <td>‘vmin’
+     </td><td>1% of viewport's smaller dimension
+    </td></tr><tr>
+     <td>‘vmax’
+     </td><td>1% of viewport's larger dimension
+  </td></tr></tbody></table>
+ <p class="slide-item">相对单位的应用, <a href="http://result.dabblet.com/gist/6114523/4b52089927c5fdd3d0ccd54d4c24b0bfb8252b61" target="_blank">例1</a>
+<div class="slide-item">算术题：
+<pre><code class="language-css">body { font-size:14px; }
+h1 { font-size:1em;width:50em; }
+h1 p { font-size:2em;width:50em; }
+</code></pre>
+</div>
+</article>
+</div>
+
+
+  <div class="page">
+    <article>
+      <h2>层叠和继承</h2>
+      <pre class="col">
+      <code class="language-css">.list li {
+        margin: 10px 0 0 0;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .list-member li {
+        font-size: 12px;
+      }
+      </code>
+      </pre>
+      <pre class="col">
+      <code class="language-markup">&lt;div class="list list-member"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Member ID1
+          &lt;li&gt;Member ID2
+          &lt;li&gt;Member ID3
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      </code>
+      </pre>
+      <p>根据CSS优先级将两条规则加在一起。实际为：
+      <div class="slide-item">
+      <pre class="col">
+      <code class="language-css">
+        margin: 10px 0 0 0;
+        font-size: 12px;
+        color: #666;
+      </code>
+      </pre>
+      </div>
+      
+      <p class="slide-item">继承，下列属性子元素可以继承父级的。
+      <ul class="list-1 slide-item">
+        <li>文本样式相关: font-family/font-size/font-style/font-variant/font-weight/letter-spacing/line-height/text-align/text-indent/text-transform/word-spacing</li>
+        <li>列表样式相关: list-style-image/list-style-position/list-style-type/list-style</li>
+        <li>颜色相关: color</li>
+      </ul>
+
+<div class="slide-item">
+<p>好处：便用复用，代码精简。
+<pre>
+<code class="language-markup">
+&lt;a href="#" class="btn btn-register">注册&lt;/a>
+</code>
+</pre>
+.btn抽象出来的通用UI元素。
+<p>引出系统设计的话题。抽象能力。 
+</div>
+    </article>
+  </div>
+
+
+
+  <div class="page">
+    <article>
+      <h2>CSS规则的优先级关系</h2>
+      <p>优先级可以精确计算
+      <pre class="col">
+      <code class="language-markup">
+      div.conent p { color:#000; }
+      
+
+
+      #db-site-note p { color:#999; }
+
+
+
+      &lt;div style="color:red"&gt;
+        &lt;p>正文&lt;/p>
+      &lt;/div>
+      
+
+      p { color:#000 !important; }
+      </code>
+      </pre>
+      <div class="pic col slide-item">
+      <img src="static/pics/figure.17.png" alt="" />
+      </div>
+      
+      <div class="slide-item">
+      <p>同值，按规则定义的先后顺序。
+      <pre class="col">
+      <code class="language-css">.list-member li {
+        font-size: 12px;
+      }
+
+      .list li {
+        margin: 10px 0 0 0;
+        font-size: 14px;
+        color: #666;
+      }
+      </code>
+      </pre>
+      <pre class="col">
+      <code class="language-markup">&lt;div class="list list-member"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Member ID1
+          &lt;li&gt;Member ID2
+          &lt;li&gt;Member ID3
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      </code>
+      </pre>
+      </div>
+     <p class="slide-item">避免用!important和标签的style属性
+    </article>
+  </div>
+
+
+
+  <div class="page page-boxes">
+  <article>
+    <h2>渲染的最小单位 -- 盒(Boxes)</h2>
+      <p class="slide-item">盒，简单理解为所有被标签标记的元素，标签之外的看作匿名box。</p>
+      <p class="slide-item">决定如何渲染，一是计算尺寸(宽/高)，二是如何定位</p>
+      <p class="slide-item">盒模型，box的尺寸规格</p>
+      <p class="slide-item">4区域：内容区域、内边距(padding)、边框(border)、外边距(margin)</p>
+  <div class="pic col slide-item">
+    <img src="http://www.w3.org/TR/CSS2/images/boxdim.png" alt="" />
+  </div>
+      <pre class="col slide-item">
+      <code class="language-css">
+      p { margin: 10px; }
+      p { margin: 10px 20px; }
+      p { margin: 10px 20px 5px; }
+      p { 
+          width: 200px;
+          padding: 20px;
+          border: 1px solid #eee;
+          border-width: 1px 0;
+          border-style: solid none dashed;
+          margin: 10px 20px 5px 20px;
+      }
+      </code>
+      </pre>
+  <div class="slide-item">box的类型
+  <ol>
+    <li>block box -- display: block;
+    <li>inline box -- display: inline;
+    <li>inline-block box -- display: inline-block;
+    <li>anonymous box
+   </ol>
+   </div>
+  </article>
+  </div>
+
+
+   <div class="page">
+     <article>
+       <h2>CSS2.1 3种定位</h2>
+       <ul class="list">
+         <li class="slide-item">常规流(Normal Flow): 
+             <ol>
+              <li>static position(默认)
+              <li>relative position
+             </ol>
+         <li class="slide-item">浮动(Float)
+         <li class="slide-item">绝对定位(Absolute Position): 
+             <ol>
+              <li>absolute position 
+              <li>fixed position
+             </ol>
+       </ul>
+     </article>
+   </div>
+
+
+   <div class="page">
+     <article>
+     <h2>Normal Flow</h2>
+       <p class="slide-item">block box(块级元素): width/height属性有效，不指定宽自动充满父容器(父级block元素)
+       <p class="slide-item">inline box(行内元素): width/height属性无效，宽度由实际内容绝定，遇到父容器边缘折行（连续字符例外，word-wrap:break-word）
+       <p class="slide-item">block格式化：1. 垂直、顺序布局 2. 折叠边距特性
+     <div class="pic slide-item">
+       <img src="static/pics/figure.12.png" alt="" />
+     </div>
+       <p class="slide-item">inline格式化：1. 水平方向、顺序布局 2. 垂直方向的padding/margin无效 
+       <p class="slide-item">inline-block box: 内部按block格式化，外部按inline格式化 
+       <p class="slide-item">static position - 包括block格式化/inline格式化，left/right/top/bottom/z-index属性无效
+       <p class="slide-item">relative position - 包括block格式化/inline格式化，left/right/top/bottom/z-index属性有效
+     <div class="pic slide-item">
+       <img src="static/pics/figure.13.png" alt="" />
+     </div>
+     </article>
+   </div>
+
+
+
+
+
+   <div class="page">
+     <article>
+     <h2>Float</h2>
+     <p class="slide-item">left/right/none。脱离当前文档流，定位到父容器的边缘，或另一个float box的边缘
+     <p class="slide-item">不定宽情况下，实际宽度由内容决定
+     <p class="slide-item">父容器水平方向空间不足时，向下移动直到可以放下
+     <p class="slide-item">文档流中的inline box环绕float box 
+     <p class="slide-item">会和文档流中的block box重叠。用clear:both|left|right避免重叠
+     <p class="slide-item">float会形成一个新的block formatting context(块格式化上下文，后面介绍)
+     <p class="slide-item">float不会超出所在BFC的范围，也不会和其它BFC重叠
+     <p class="slide-item">left/right/top/bottom/z-index属性无效
+     <div class="pic slide-item">
+       <img src="static/pics/figure.14.png" alt="" />
+     </div>
+     </article>
+   </div>
+
+
+
+
+
+   <div class="page">
+     <article>
+     <h2>Absolute Position</h2>
+     <p class="slide-item">脱离当前文档流。浮在其它元素上，z-index决定z轴上的关系
+     <p class="slide-item">不定宽情况下，实际宽度由内容决定
+     <p class="slide-item">float会形成一个新的block formatting context
+     <p class="slide-item">left/right/top/bottom/z-index属性有效
+     <p class="slide-item">left/right/top/bottom是距最近的absolute/relative定位的父级元素的值
+     <p class="slide-item">fixed position是相对viewport定位
+     <div class="pic slide-item">
+       <img src="static/pics/figure.15.png" alt="" />
+     </div>
+     <p class="slide-item">z-index，对relative/absolute/fixed有效。默认值auto。同值后面高于前面。
+     <div class="pic slide-item">
+       <img src="static/pics/figure.16.png" alt="" />
+     </div>
+     <p class="slide-item">事件不能穿过覆盖层。(IE例外) 可用pointer-events:none改变
+     </article>
+   </div>
+
+
+
+  
+   <div class="page">
+     <article>
+     <h2>Block Formatting Context - 块级格式化上下文</h2>
+     <p class="slide-item"> MDC定义：
+A block formatting context is a part of a visual CSS rendering of a Web page. It is the region in which the layout of block boxes occurs and in which floats interact with each other.
+     <p class="slide-item">一个BFC是CSS可视化渲染页面的一部分(一个区域)，它是把一组块级box和浮动元素放在一起布局的区域。
+    <div class="slide-item">
+     <h3>特性：</h3>
+     <ol class="list-1">
+     <li>不存在折叠边距
+     <li>浮动元素不会超出它的范围
+     <li>不会跟其它浮动元素重叠
+     </ol>
+
+     <h3>形成新的BFC：</h3>
+     <ol class="list-1">
+     <li>float属性不为none
+     <li>overflow属性不为visible
+     <li>display属性是table-cell/table-caption/inline-block
+     <li>position属性不为static/relative
+     </ol>
+
+     <p>IE6/7没有BFC的概念。IE6/7的hasLayout与BFC类似。通常用zoom:1触发。
+     </div>
+     </article>
+   </div>
+
+
+
+  <div class="page">
+    <article>
+    <h2>CSS 2.1布局方案小结</h2>
+    <div class="figure slide-item">
+      <img src="static/pics/figure.18.png" alt="" />
+    </div>
+    <div class="figure slide-item">
+      <span class="subtitle">选择合适的布局方案</span>
+    <img src="static/pics/figure.10.png" alt="" />
+    </div>
+    </article>
+  </div>
+
+
+  <div class="page page-end">
+    <article>
+    <p>Q & A
+    </article>
+  </div>
+
+
+  <div class="no-support">
+    Sorry! 暂不支持你的浏览器，请用Chrome打开...
+  </div>
+  <script src="static/js/prism.js"></script>
+  <script src="static/js/zepto.js"></script>
+  <script src="static/js/slides.js"></script>
+  <script>
+    function answer01(node) {
+      node.prev().css('color', 'green');
+    }
+  </script>
+</body>
+</html>
