@@ -120,3 +120,135 @@ body {
   font-size: 1.5em;
   color: #777;
 }
+
+.graph {
+  position: relative;
+  height: 10em;
+  font-size: 0;
+  margin: 4em 0;
+  -webkit-transition: all .5s;
+}
+
+.arrow {
+  position: absolute;
+  border-bottom: 1px solid #666;
+  width: 6em;
+  -webkit-transition: all .5s;
+}
+
+.arrow i {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  right: 2px;
+  top: -.5em;
+  border-left: 1px solid #666;
+  border-top: 1px solid #666;
+  -webkit-transform: rotateZ(135deg);
+}
+
+.arrow .text {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  text-align: center;
+}
+
+
+.people {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  -webkit-transition: all .5s;
+}
+.people:hover .head,
+.people:hover .body,
+.people:hover .title {
+  border-color: blue;
+  color: blue;
+  cursor: default;
+}
+
+.people .head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -.5em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 1px solid #666;
+}
+
+.people .body {
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  bottom: 0;
+  margin-left: -1em;
+  margin-top: 1px;
+  width: 2em;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border: 1px solid #666;
+}
+
+.people .title {
+  position: absolute;
+  width: 100%;
+  text-align:center;
+  bottom: 0;
+  font-style: normal;
+  background: #fff;
+}
+
+.people:hover .say {
+  display: block;
+}
+
+.people .say {
+  display: none;
+  top: 80%;
+  position: absolute;
+  min-width: 120%;
+  max-width: 160%;
+  background: #fff7ce;
+  border: 1px solid #ffd3a5;
+  z-index: 1;
+  padding: .3em;
+  font-size: 14px;
+}
+
+.circle { display:none;position:absolute;width:6em;height:6em;border:3em solid rgba(0,0,0,.1);border-radius:100%; }
+
+
+.graph-process-old { height:5em; }
+.graph-process-old .role-designer { left:11em; }
+.graph-process-old .role-fe { left:24em; }
+.graph-process-old .role-be { left:36em; }
+.graph-process-old .role-user { left:48em; }
+.graph-process-old .arrow1 { left:17em;top:2em; }
+.graph-process-old .arrow2 { left:29em;top:2em; }
+.graph-process-old .arrow3 { left:41em;top:2em; }
+.graph-process-old .arrow4 { left:4em;top:2em; }
+.graph-process-old .circle1 { left:7em;top:-4em; }
+.graph-process-old .circle2 { left:20em;top:-4em; }
+
+
+.graph-process-new { height:10em; }
+.graph-process-new .role-pm { top:2em; }
+.graph-process-new .role-designer { left:15em;top:3em; }
+.graph-process-new .role-fe { left:19.5em;top:3em; }
+.graph-process-new .role-be { left:24em;top:3em; }
+.graph-process-new .role-user { left:36em;top:2em; }
+.graph-process-new .arrow1 { display:none; }
+.graph-process-new .arrow2 { display:none; }
+.graph-process-new .arrow3 { left:30em;top:4em; }
+.graph-process-new .arrow4 { left:4em;top:4em; }
+.graph-process-new .circle1 { display:block;left:10em;top:-3em;width:16em;height:10em; }
+.graph-process-new .circle2 { display:none !important; }
+
+
+.graph-process-circle .circle { display:block; }
+
+.css-org span { color:blue; }
