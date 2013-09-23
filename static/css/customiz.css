@@ -1,7 +1,7 @@
 body {
   color: #555;
   background-color: #ccc;
-  box-shadow: inset 0 0 30px rgba(0,0,0,.6);
+  box-shadow: inset 0 0 30px 2px rgba(0,0,0,.6);
 }
 
 .page article a:link,
@@ -245,7 +245,7 @@ body {
 .graph-process-new .arrow2 { display:none; }
 .graph-process-new .arrow3 { left:30em;top:4em; }
 .graph-process-new .arrow4 { left:4em;top:4em; }
-.graph-process-new .circle1 { display:block;left:10em;top:-3em;width:16em;height:10em; }
+.graph-process-new .circle1 { display:block;left:10em;top:-3em;width:16em;height:10em;border-color:rgba(0, 255, 46, .2); }
 .graph-process-new .circle2 { display:none !important; }
 
 
