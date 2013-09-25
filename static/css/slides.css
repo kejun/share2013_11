@@ -94,6 +94,7 @@ p {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
+.bn-toggle-gesture,
 .bn-toggle-fullscreen {
   position:fixed;
   z-index:10;
@@ -102,6 +103,12 @@ p {
   font-size:12px;
   color:#ccc;
 }
+
+.bn-toggle-gesture {
+  bottom: 40px;
+}
+
+.bn-toggle-gesture input,
 .bn-toggle-fullscreen input {
   -webkit-appearance: none;
   border: 1px solid #ccc;
@@ -111,6 +118,7 @@ p {
   vertical-align: text-bottom;
 }
 
+.bn-toggle-gesture input:checked,
 .bn-toggle-fullscreen input:checked {
   background: #ddd;
 }

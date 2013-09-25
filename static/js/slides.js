@@ -168,6 +168,8 @@ $('.page').on('click', function(e) {
   showSlideItem(page);
 });
 
+
+
 ;(function() {
   document.cancelFullScreen = document.webkitCancelFullScreen 
                            || document.mozCancelFullScreen
@@ -199,3 +201,26 @@ $('.page').on('click', function(e) {
   };
 
 })();
+
+
+var swipeDelay;
+$('.bn-toggle-gesture input').bind('change', function() {
+  if (this.checked) {
+     initializeWebcamSwiper();
+  } else {
+     destroyWebcamSwiper();
+  }
+});
+
+$('body').bind('webcamSwipeLeft', function() {
+  swipeDelay && clearTimeout(swipeDelay);
+  swipeDelay = setTimeout(function() {
+    next();
+  }, 500);
+});
+$('body').bind('webcamSwipeRight', function() {
+  //swipeDelay && clearTimeout(swipeDelay);
+  //swipeDelay = setTimeout(function() {
+  //  prev();
+  //}, 1000);
+});
