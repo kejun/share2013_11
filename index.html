@@ -115,44 +115,70 @@
 </div>
 
 <p class="slide-item" data-action="setTimeout(function(){$('.graph-process-old').addClass('graph-process-circle');$('.text-mark2').css('color', 'blue');}, 100)">专业圈子越来越大，交集越来越小，自得其乐。乐趣点不再是最终的产品
+<p class="slide-item">中国的现象：
+<ol class="list-1">
+  <li class="slide-item">不懂协作。人多不是协作，是劳动密集型
+  <li class="slide-item">只对上面负责
+</ol>
 <p class="slide-item">改进：努力影响前面的环节，信息不均衡，沟通过程艰巨，效果不佳。更多时候产品设计的讨论时间被拖长，挤占开发时间，最后不能很好还原产品设计
-<p class="slide-item">继续改进：需要用一种观念来打破。LD包含的设计思想和技术问题，能建起一个共同追求的目标。一切为了做出一个更好的产品。
-<p class="slide-item" data-action="setTimeout(function(){$('.graph-process-old').addClass('graph-process-new');}, 100)">围绕LD，重构产品实现环节:
-
-  <ul class="list-1">
-    <li class="slide-item">拆分设计过程：1. IA+ID、2. VD
-    <li class="slide-item">根据IA+ID，快速原型。Designer/FE/BE在一起，不断迭代原型(共同演化)。前期"粗猛快"，着重于架构、模板组织上
-    <li class="slide-item">VD参考原型。以"细胞组织"的方式进行系统的设计
-    <li class="slide-item">后期陆续还原所有细节
-  </ul>
+<p class="slide-item">继续改进：需要用一种观念来打破。LD包含的设计思想和技术问题，能建起一个共同追求的目标。一切为了做出一个更好的产品
+<p class="slide-item" data-action="setTimeout(function(){$('.graph-process-old').addClass('graph-process-new');}, 100)">围绕LD，重构产品实现环节
+  <ol class="list-1">
+    <li class="slide-item">Designer和Devs都是产品实现者
+    <li class="slide-item">打破角色、部门的界线，更密切的协作。从不同专业角度出发形成合力
+    <li class="slide-item">把实现的目标产品，当成活的成长的对待。否则跟外包团队无异
+  </ol>
   </article>
 </div>
 
 
 <div class="page">
   <article>
-  <h2>LD的设计思想</h2>
-  <p>核心思想：解构和组合。简而言之，解构到信息元素的最小粒度，设定它的属性和行为，再根据结构关系(layout)和使用场景(page)组合起来。
+  <h2>LD的设计实现思路</h2>
+  <p class="slide-item">传统的设计实现是把页面当成对象。常常解决局部问题，整个页面改版。
+  <p class="slide-item">核心思想：解构和组合。简而言之，解构到信息元素的最小粒度，设定它的属性和行为，再根据结构关系(layout)和使用场景(page)组合起来。
   <div class="figure slide-item">
     <img src="static/pics/figure.6.svg" width="50%" />
   </div>
+  <ol class="list-1">
+    <li class="slide-item">形成系统的设计。提高实现效率
+    <li class="slide-item">精确定位问题，避免颠覆性的解决思路
+    <li class="slide-item">前端代码是UI的最高抽象。解构和组合的思路是一致的
+  </ol>
+  <p class="slide-item">关键词：解构、组合、属性、行为、结构关系(layout)、使用场景(page)
+</div>
+  </article>
+</div>
+
+
+
+<div class="page">
+<article>
+<h2>例子:</h2>
   <div class="figure slide-item">
     <img src="static/pics/html_1_1.jpg"/>
   </div>
   <p class="slide-item">如果简单按设计稿还原，会在开发最后阶段甚至上线后暴露出一些问题(有些时候可能颠覆设计)：
   <ol class="list-1 slide-item">
-  <li>商品名通常很长，会拆行
+  <li>大多数时候商品名会很长拆行
   <li>真实图片的比例多样，现有缩略图的尺寸不符
-  <li>左边的button会变化，如不是"分享的商品"而是"推荐的电影"
-  <li>有button是链接，有的带交互
-  <li>有没有评论内容
-  <li>时间的显示
+  <li>左边button有的是链接，有的带交互
+  <li>有些情况下没有评论内容
+  <li>时间显示：一小时内?一天内？一年内？
   </ol>
-  <p class="slide-item">运用LD思想：<br>第1步，组织性原则的运用 － UI由有组织的元素构成。分解构成元素（哪些现有设计系统里有的，哪些是新的）：
+  </article>
+</div>
+
+
+
+<div class="page">
+<article>
+  <h2>LD的设计实现思路</h2>
+  <p class="slide-item">第1步，UI是由有组织的元素构成。分解构成元素（哪些现有设计系统里有的，哪些是新的）：
   <div class="figure slide-item"><img src="static/pics/html_1_2.jpg"/></div>
-  <p class="slide-item">设定单个元素的属性和行为。属性包括：尺寸、最大范围、行高、字号、颜色、字数长度、对齐方式。行为：互动操作说明。
-  <p class="slide-item">设计的范围缩小到更小的粒度，更容易发现细节。
-  <p class="slide-item">提前暴露细节，一个细节对应一个技术问题，举例：
+  <p class="slide-item">设定单个元素的属性和行为。属性包括：尺寸、最大范围、行高、字号、颜色、字数长度、对齐方式。行为：操作说明。
+  <p class="slide-item">设计的范围缩小到更小的粒度后，更容易发现细节。
+  <p class="slide-item">提前暴露细节，一个细节对应一个技术问题，比如：
   <div class="col slide-item">
  <p>4 + 5 + 6的对齐关系，垂直居中：
 <iframe src="http://result.dabblet.com/gist/6577711/c8511563b5e44bd78bb331f8179649af3f0ce441" frameBorder="0" width="100%" height="380"></iframe>
@@ -163,22 +189,28 @@
   </div>
   <p class="slide-item">第2步，分解结构。设定区域(1~4)和区域间的关系：
   <div class="figure slide-item"><img src="static/pics/html_1_3.jpg" width="50%"></div>
-  <p class="slide-item">结构和元素后期需求变更，互不影响。
-  <p class="slide-item">第3步，组合。间距、对齐。
+  <p class="slide-item">结构和元素互不影响。需求变更，明确是改结构解决还是换元素解决。比如在做RWD时，很多时候是变化结构
+  <p class="slide-item">第3步，组合。按照一定的间距、对齐关系组合起来。
   <div class="figure slide-item"><img src="static/pics/html_1_5.gif" width="50%"></div>
-  <p class="slide-item">第4步，实现。应用层的代码架构和模板的组织方式跟设计是一一对应的。从抽象到具体的连贯性。
+  <p class="slide-item">第4步，代码实现。从抽象到具体的连贯性。代码是最高抽象。
   </article>
 </div>
 
 
 
+
 <div class="page">
 <article>
-<h2>更大的发挥技术的作用</h2>
-<ol class="list-1">
-<li class="slide-item"><a href="http://kejun.github.io/share2013_6/">"工程之美"</a>
-<li>
-</ol>
+  <h2>小结</h2>
+  <p class="slide-item">背景：设计和技术应能满足产品的持续演变、进化(有生命的)
+  <p class="slide-item">意义：生命周期越长、产品实现价值越大，聚焦在产品实现的价值上
+  <p class="slide-item">活的设计(LD)是一个设计师和工程师共同所有的观念
+  <p class="slide-item">对比合约－交付性的设计，LD的特性：适配性、响应性、组织性、扩展性
+  <p class="slide-item">LD的工作流。协作、专业互补、一个目标
+  <p class="slide-item">LD的实现思路。解构和组合
+  </article>
+</div>
+
 
 <!--
   <p class="slide-item">Designer ＋ F2E紧密协作，才能达成。为此需要用技术消除障碍，举例：
@@ -194,16 +226,27 @@ SCSS:
   <iframe src="http://cdpn.io/rjDnA" frameborder="0" width="100%" height="300"></iframe>
   </div>
 -->
-</article>
-</div>
-
-
 
 
 <div class="page">
 <article>
-<h2>还原LD - 协作</h2>
-<p>A项目(项目名称不便透露)的协作过程。
+<h2>还原LD - HOWTO</h2>
+<ol class="list-1">
+<li class="slide-item">专业协作。一个高效、紧密协作的工作流
+<li class="slide-item">围绕LD的设计实现(前面所讲)
+<li class="slide-item">LD背后的开发观念
+<li class="slide-item">响应用户的使用环境
+<li class="slide-item">静态文件的组织
+<li class="slide-item">必备基础设施：组件化系统
+</ol>
+</article>
+</div>
+
+
+<div class="page">
+<article>
+<h2>还原LD - 协作流程</h2>
+<p class="slide-item">分析A项目(项目名称不便透露)的协作过程。
 <ol class="list-1">
 <li class="slide-item">PM写了一份简要的PRD，招集设计师和工程师开会说明初衷，启动项目
 <li class="slide-item">根据产品目标，出wireframe，围绕内容，流程设计
