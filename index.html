@@ -29,7 +29,7 @@
 <article style="background:#fff url(static/pics/bg.jpg) no-repeat 0 90%;background-size:100% auto;">
 <div class="page-cover-content">
 <div class="title">
-  还原"活"的设计<br><small>前端开发的核心价值</small> 
+  还原"活"的设计<br><small> === Designer X Engineer === 核心价值</small> 
 </div>
 <div class="author"><a href="http://www.douban.com/people/listenpro/"><img src="http://img3.douban.com/icon/u1170308-32.jpg" width="24" alt=""></a>Kejun (@kejunz)</div>
 </div>
@@ -53,7 +53,7 @@
 
 <div class="page">
 <article>
-  <h2>"活"的设计(Living Design, 简称LD)? </h2>
+  <h2>背景</h2>
   <!--div class="text-design slide-item">
   <span class="d1">Design</span>
   <span class="d2 slide-item" data-action="$('.text-design .d1').hide()">De&sdot;sign</span>
@@ -61,12 +61,38 @@
   <span class="d4 slide-item" data-action="$('.text-design .d3').hide()">Co&sdot;design</span>
   <span class="d5 slide-item" data-action="$('.text-design .d4').hide()">Code&sdot;sign</span>
   </div-->
-  <p class="slide-item">现象: 设计师只关心工程师做出来的跟设计稿是否完全一致。限制双方的价值
-  <p class="slide-item">传统的设计过程：IA (产出Wireframe) > 交互(产出Prototype) > 视觉(产出UI Spec), 无论多严谨也无法保证线上产品的效果
-  <p class="slide-item">设计师和工程师是产品实现的协作者。产品实现的价值：(传播/互动)效果、成本、效率
-  <p class="slide-item">产品是"活"的。用户需求的变化、产品意图的尝试、不同的使用环境、不同的设备...产品设计随之不断演变，甚至需要多种形态共存
-  <p class="slide-item">有生命力的产品，是不断成长的，发育成熟或脱胎换骨。设计师和工程师的价值本现在其中
-  <p class="slide-item">PRD是"死"的、设计稿是"死"的、文档是"死"的、Wireframe也是"死"的，投入再多的时间做这些也无法令人满意(浪费太多时间)。
+<!--限制双方的价值 -->
+<div class="slide-item" data-action="setTimeout(function(){$('.graph-design-process').css({fontSize:18,height:'1em'});},20)">
+<p>问题1: 如此漫长的产品开发过程：
+<div class="graph graph-design-process">
+<div class="node"><i>Idea<br>(PM)</i></div>
+<div class="arrow arrow0"><i></i><span class="text">PRD</span></div>
+<div class="node node0"><i>IA<br>(D/PM)</i></div>
+<div class="arrow arrow1"><i></i><span class="text">Wireframe</span></div>
+<div class="node node1"><i>交互<br>(D)</i></div>
+<div class="arrow arrow2"><i></i><span class="text">Prototype</span></div>
+<div class="node node2"><i>视觉<br>(D)</i></div>
+<div class="arrow arrow3"><i></i><span class="text">PSD</span></div>
+<div class="node node3"><i>开发<br>(Eng)</i></div>
+<div class="arrow arrow4"><i></i><span class="text">CODE</span></div>
+<div class="node node4"><i>上线</i></div>
+</div>
+<div class="slide-item" data-action="$('.graph-design-process').hide()" style="text-align:center;"><img src="static/pics/figure.6.jpg" alt=""></div>
+<p class="slide-item">问题2: 设计师只关心工程师做出来的跟设计稿是否完全一致。什么更值得关注？
+</div>
+  <p class="slide-item">问题3: 设计师和工程师同为产品实现者，长期"分居"。
+</article>
+</div>
+
+<div class="page">
+  <article>
+    <h2>价值</h2>
+  <p class="slide-item" style="padding:1em 0;font-size:2em;text-align:center;">产品实现的价值 = (效果 / 成本) * 效率
+  <p class="slide-item">效果指达成产品目标的情况
+  <p class="slide-item">成本、效率属于工程开发范畴的概念
+  <p class="slide-item">多元化的时代，产品是"活"的。用户需求变化、产品创新、不同平台、不同使用环境、不同设备...固定形态不能满足，演变更快!
+  <p class="slide-item">有生命力的产品，是不断成长的，发育成熟或脱胎换骨。设计师和工程师的价值正体现其中，强联系
+  <p class="slide-item">那些所谓的工作成果: PRD是"死"的、设计稿是"死"的、文档是"死"的、Wireframe也是"死"的，投入再多时间去做也无法令人满意(浪费时间)。
   <p class="slide-item">被动的实现它，无非是实现一个"死"的东西。价值何在?! nothing more
   <!--
     我通常拒绝盲目加人。只有廉价劳动力才是这样。这说明流程、架构、协作还没有充分做好。
@@ -76,21 +102,22 @@
 
 <div class="page">
   <article>
-    <h2>共同的目标：实现"活"的设计</h2>
+    <h2>"活"的设计(Living Design, 简称LD)? </h2>
     <div class="slide-item">
     <p><a href="http://zh.wikipedia.org/wiki/%E7%94%9F%E5%91%BD">生命体基本特征</a>的类比：
     <ol class="list-1">
-      <li>体内平衡 &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">平衡性，灵活适配内容的变化。文字长度、图片尺寸等各种可能情况</span></li>
-      <li>组织性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">由UI元素构成(原子设计、卡片设计)</span></li>
+      <li>体内平衡 &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">这种自动调节指适配性。适配内容变化(文字长度、图片尺寸)、屏幕等各种情况</span></li>
+      <li>组织性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">UI可解构为UI元素的系统构成(原子设计、卡片设计)</span></li>
       <li>新陈代谢 &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">新的UI元素不断替代旧的元素。保持整体设计的活力</span></li>
-      <li>生长&emsp;&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">由最小可用的形态，不断迭代，持续完善</span></li>
-      <li>适应性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">能适应用户使用环境(响应式设计, RWD)</span></li>
-      <li>反应性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">响应用户各种操作（mouse、keyboard、touch、voice、gesture），拥有各种状态(错误、失效、等待、处理...)</span></li>
-      <li>繁殖&emsp;&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">基于现有的设计系统之上，快速构建新的产品原型</span></li>
+      <li>生长&emsp;&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">从最小可用形态(MVP)，跟随需求、不断迭代、持续完善</span></li>
+      <li>适应性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">能适应用户的使用环境(响应式设计, RWD)</span></li>
+      <li>反应性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">能响应用户的各种操作(mouse/keyboard/touch/voice/gesture)，反馈各种状态(错误、失效、等待、处理...)</span></li>
+      <li>繁殖&emsp;&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">基于现有的生态体系，快速孵化新产品</span></li>
     </ol>
     </div>
-    <p class="slide-item">定义：LD是由有组织的UI元素构成，能适应不同的使用环境，响应用户的行为，灵活适配内容，可扩展、可继承的设计。不再只是满足单一情景下的特定形式。
-    <p class="slide-item">4大基本特性: 适配性、响应性、组织性、扩展性。
+    <p class="slide-item">定义：LD是由有组织的UI元素构成，能适应不同的使用环境，响应用户的行为，灵活适配内容、可扩展、可继承的设计。
+    <p class="slide-item">比较传统设计(契约-交付式设计): 单一vs.多态，固定vs.变化，颠覆vs.进化
+    <p class="slide-item">LD的基本特征: 适配性、响应性、组织性、扩展性。
   </article>
 </div>
 
@@ -114,19 +141,22 @@
 </div>
 </div>
 
-<p class="slide-item" data-action="setTimeout(function(){$('.graph-process-old').addClass('graph-process-circle');$('.text-mark2').css('color', 'blue');}, 100)">专业圈子越来越大，交集越来越小，自得其乐。乐趣点不再是最终的产品
-<p class="slide-item">中国的现象：
+<p class="slide-item" data-action="setTimeout(function(){$('.graph-process-old').addClass('graph-process-circle');$('.text-mark2').css('color', 'blue');}, 100)">专业圈子越来越大，交集越来越小，自得其乐。价值迷失阶段
+<p class="slide-item">现象：
 <ol class="list-1">
   <li class="slide-item">不懂协作。人多不是协作，是劳动密集型
   <li class="slide-item">只对上面负责
 </ol>
-<p class="slide-item">改进：努力影响前面的环节，信息不均衡，沟通过程艰巨，效果不佳。更多时候产品设计的讨论时间被拖长，挤占开发时间，最后不能很好还原产品设计
-<p class="slide-item">继续改进：需要用一种观念来打破。LD包含的设计思想和技术问题，能建起一个共同追求的目标。一切为了做出一个更好的产品
-<p class="slide-item" data-action="setTimeout(function(){$('.graph-process-old').addClass('graph-process-new');}, 100)">围绕LD，重构产品实现环节
+<p class="slide-item">改进：让环节重叠，后面努力影响前面。信息不均衡，沟通艰巨。更多时候陷入长长的讨论(参考塞叶法则Sayre’s Law)，挤占开发时间，牺牲细节
+<p class="slide-item" data-action="setTimeout(function(){$('.graph-process-old').addClass('graph-process-new');}, 100)">继续改进：产品实现的"黑盒"。
+<p class="slide-item">LD包含的设计思想和技术问题，能树起一个共同追求的目标。一切为了做出一个更好的产品
+<p class="slide-item">充分体现价值。回顾产品实现的价值公式：
+<p class="slide-item">产品实现的价值 = (效果 / 成本) * 效率
+<p class="slide-item">围绕LD，重构产品实现环节
   <ol class="list-1">
     <li class="slide-item">Designer和Devs都是产品实现者
     <li class="slide-item">打破角色、部门的界线，更密切的协作。从不同专业角度出发形成合力
-    <li class="slide-item">把实现的目标产品，当成活的成长的对待。否则跟外包团队无异
+    <li class="slide-item">对象是活的产品。不能简单实现。不是外包团队
   </ol>
   </article>
 </div>
@@ -135,14 +165,14 @@
 <div class="page">
   <article>
   <h2>LD的设计实现思路</h2>
-  <p class="slide-item">传统的设计实现是把页面当成对象。常常解决局部问题，整个页面改版。
   <p class="slide-item">核心思想：解构和组合。简而言之，解构到信息元素的最小粒度，设定它的属性和行为，再根据结构关系(layout)和使用场景(page)组合起来。
   <div class="figure slide-item">
     <img src="static/pics/figure.6.svg" width="50%" />
   </div>
   <ol class="list-1">
     <li class="slide-item">形成系统的设计。提高实现效率
-    <li class="slide-item">精确定位问题，避免颠覆性的解决思路
+    <li class="slide-item">精确定位问题，避免颠覆性的解决思路。
+    传统的设计实现是把页面当成对象。常常为解决局部问题，整个页面改版。
     <li class="slide-item">前端代码是UI的最高抽象。解构和组合的思路是一致的
   </ol>
   <p class="slide-item">关键词：解构、组合、属性、行为、结构关系(layout)、使用场景(page)
@@ -173,8 +203,8 @@
 
 <div class="page">
 <article>
-  <h2>LD的设计实现思路</h2>
-  <p class="slide-item">第1步，UI是由有组织的元素构成。分解构成元素（哪些现有设计系统里有的，哪些是新的）：
+  <h2>应用LD的设计实现思路</h2>
+  <p class="slide-item">第1步，解构元素。提取出UI元素（哪些现有设计系统里有的，哪些是新的）：
   <div class="figure slide-item"><img src="static/pics/html_1_2.jpg"/></div>
   <p class="slide-item">设定单个元素的属性和行为。属性包括：尺寸、最大范围、行高、字号、颜色、字数长度、对齐方式。行为：操作说明。
   <p class="slide-item">设计的范围缩小到更小的粒度后，更容易发现细节。
@@ -189,10 +219,10 @@
   </div>
   <p class="slide-item">第2步，分解结构。设定区域(1~4)和区域间的关系：
   <div class="figure slide-item"><img src="static/pics/html_1_3.jpg" width="50%"></div>
-  <p class="slide-item">结构和元素互不影响。需求变更，明确是改结构解决还是换元素解决。比如在做RWD时，很多时候是变化结构
+  <p class="slide-item">结构和元素分离。需求变更时，明确是调整结构解决还是替换元素解决。
   <p class="slide-item">第3步，组合。按照一定的间距、对齐关系组合起来。
   <div class="figure slide-item"><img src="static/pics/html_1_5.gif" width="50%"></div>
-  <p class="slide-item">第4步，代码实现。从抽象到具体的连贯性。代码是最高抽象。
+  <p class="slide-item">第4步，代码实现。代码是最高抽象。从抽象到具体保持一致。
   </article>
 </div>
 
@@ -202,12 +232,13 @@
 <div class="page">
 <article>
   <h2>小结</h2>
-  <p class="slide-item">背景：设计和技术应能满足产品的持续演变、进化(有生命的)
+  <p class="slide-item">背景：设计和技术应能满足产品的持续演变、进化(产品是有生命的)
   <p class="slide-item">意义：生命周期越长、产品实现价值越大，聚焦在产品实现的价值上
-  <p class="slide-item">活的设计(LD)是一个设计师和工程师共同所有的观念
-  <p class="slide-item">对比合约－交付性的设计，LD的特性：适配性、响应性、组织性、扩展性
-  <p class="slide-item">LD的工作流。协作、专业互补、一个目标
-  <p class="slide-item">LD的实现思路。解构和组合
+  <p class="slide-item">价值：产品实现的价值 = (效果 / 成本) * 效率
+  <p class="slide-item">活的设计(LD)是一个观念，是设计师x工程师共同所有的观念。传统的设计实现过时
+  <p class="slide-item">什么是LD，LD的特征：适配性、响应性、组织性、扩展性
+  <p class="slide-item">基于LD的工作流。产品实现环节的"黑盒"，协作者关系
+  <p class="slide-item">LD实现思路的核心：解构和组合
   </article>
 </div>
 
@@ -235,9 +266,9 @@ SCSS:
 <li class="slide-item">专业协作。一个高效、紧密协作的工作流
 <li class="slide-item">围绕LD的设计实现(前面所讲)
 <li class="slide-item">LD背后的开发观念
-<li class="slide-item">响应用户的使用环境
+<li class="slide-item">必备基础设施：组件化的静态文件管理系统
 <li class="slide-item">静态文件的组织
-<li class="slide-item">必备基础设施：组件化系统
+<li class="slide-item">超越传统响应式开发
 </ol>
 </article>
 </div>
@@ -246,15 +277,15 @@ SCSS:
 <div class="page">
 <article>
 <h2>还原LD - 协作流程</h2>
-<p class="slide-item">分析A项目(项目名称不便透露)的协作过程。
+<p class="slide-item">案例分析: A项目(项目名称不便透露)的协作过程。
 <ol class="list-1">
-<li class="slide-item">PM写了一份简要的PRD，招集设计师和工程师开会说明初衷，启动项目
-<li class="slide-item">根据产品目标，出wireframe，围绕内容，流程设计
-<li class="slide-item">最初的wireframe针对M1解决最主要的产品问题
-<li class="slide-item">FE/BE搭出第一版原型有数据，简陋的样式，尽可能少写JS/CSS，流程都是同步的，但是完整。
-<li class="slide-item">基于原型。VD开始设计UI(系统的设计，不是针对某个页面, button, icon...)，ID设计交互（同步变异步，如发布流程）
-<li class="slide-item">还原的过程。前期着重于架构(基于组件的思想)，后期根据VD/ID陆续出来的部分，更新元素
-<li class="slide-item">细化实现过程，不陷在一个复杂的设计实现里，分步实现...
+<li class="slide-item">PM写了一份简要的PRD，招集DesignerxEngineer review
+<li class="slide-item">根据产品目标，出wireframe，PMxDesigner之间review
+<li class="slide-item">最初的wireframe针对M1解决最主要的产品问题(MVP)
+<li class="slide-item">FExBE搭出第一版原型带测试数据，简陋的样式，尽可能少写JS/CSS，流程是同步的，且完整
+<li class="slide-item">基于原型。VDxID开始设计，一块一块的进行
+<li class="slide-item">开发上，前期着重于架构(基于组件的思想)，后期根据陆续出来的Design一块块的更新
+<li class="slide-item">细化实现过程，不陷在一个复杂的设计实现里，分步实现
 <li class="slide-item">M1上线前，设计已经开始M2的设计
 <li class="slide-item">好的协作：多种角色间，不断抛出问题，解决问题的过程
 <div class="figure">
@@ -267,39 +298,17 @@ SCSS:
 
 
 
-
 <div class="page">
-  <article>
-  <h2>还原LD - 组织性 - "细胞"</h2>
-<p>A项目的css - UI元素的组织性，一目了然
-  <pre class="css-org slide-item">
-|-- libs.scss <span class="slide-item">基本的mixin库</span>
-|-- reset.scss <span class="slide-item">为这个应用订制的css reset(你会发现通用文件越来越难hold住全站，原则是拆解、定制)</span>
-|-- buttons.scss <span class="slide-item">通用UI元素－button</span>
-|-- font_icons.scss <span class="slide-item">通用UI元素－字体icon。适配性更强</span>
-|-- item.scss <span class="slide-item">通用UI元素－条目。</span>
-|-- progress_bar.css <span class="slide-item">通用UI元素－进度条</span>
-|-- tips.scss <span class="slide-item">通用UI元素－Tips</span>
-|-- list.scss <span class="slide-item">通用UI元素－列表</span>
-|-- layout_col2.scss <span class="slide-item">结构</span>
-|-- ui <span class="slide-item">JS组件的样式文件</span>
-|   |-- overlay.scss
-|   `-- tag_input.scss
-|-- mod_create.scss <span class="slide-item">通用业务模块: mod_开头</span>
-|-- mod_edit_desc.scss
-|-- mod_gallery_info.scss
-|-- mod_gallery_intro.scss
-|-- mod_gallery_list.scss
-|-- mod_nav_list.scss
-|-- mod_picture_list.scss
-|-- mod_picture.scss
-|-- mod_publish.scss
-|-- mod_upload.scss
-|-- member_list.scss <span class="slide-item">特定页面用到的业务代码</span>
-|-- user_profile_head.scss
-`-- ui.scss <span class="slide-item">这个应用的全局css文件</span>
-  </pre>
-  </article>
+<article>
+<h2>LD背后的开发观念</h2>
+<p class="slide-item">前端工程师的"三观"依然是底蕴
+<ol class="list-1">
+<li class="slide-item">(内容/样式/行为)三层分离。CS中的SoC原则
+<li class="slide-item">渐进增强原则(Progressive Enhancement 1.0/2.0)
+<div class="slide-item"><a href="http://www.slideshare.net/nzakas/progressive-enhancement-20#83" target="_blank"><img src="static/pics/figure.6.png" width="30%" /><br><small>(by Nicholas Zakas)</small></a></div>
+<li class="slide-item">优雅退化(Degrade with Grace) / 浏览器分级支持(GBS)
+</ol>
+</article>
 </div>
 
 
@@ -307,8 +316,8 @@ SCSS:
 
 <div class="page">
   <article>
-  <h2>还原LD - 组件化的系统</h2>
-  <p>把"细胞"们组织在一起，并且顺利的"新陈代谢"(后期维护)
+  <h2>还原LD - 组件化的静态文件管理系统(1)</h2>
+  <p>把"细胞"们组织在一起，并顺利的"新陈代谢"(后期维护)
   <p class="slide-item">A项目中最复杂的其实是一个"button"
   <p class="slide-item"><img src="static/pics/figure.19.png" valign="middle">
   <div class="slide-item">简单部署到任何场景(page)下：
@@ -347,6 +356,75 @@ ${istatic('/js/upload_pic.js')|n}
   </div>
   </article>
 </div>
+
+
+
+<div class="page">
+  <article>
+  <h2>还原LD - 组件化的静态文件管理系统(2)</h2>
+   <p>静态文件管理系统的"刚需"：
+    <ol class="list-1">
+      <li>实现模块的独立性
+      <li>依赖管理
+      <li>自动打包
+      <li>支持CSS的预处理(SCSS/LESS/Stylus)
+      <li>公共组件的包管理(构建一个更大更松散的生态体系)
+    </ol>
+  </article>
+</div>
+
+
+
+
+<div class="page">
+  <article>
+  <h2>还原LD - UI的组织性</h2>
+<p>CSS的模块化组织思想，参考<a href="http://oocss.org/" target="_blank">OOCSS</a>、<a href="http://smacss.com/" target="_blank">SMACSS</a>、<a href="http://bem.info/" target="_blank">BEM</a>等
+<p>A项目的CSS组织：兼容层 + 抽象UI层 + 组件层 ＋ 业务层
+<div class="css-org-graph slide-item">
+<div class="css-org-block">
+<ins class="css-org-label"><ins>兼容层x抽象UI层</ins></ins>
+  <pre class="css-org">|-- libs.scss <span class="slide-item">基本的mixin库</span>
+|-- reset.scss <span class="slide-item">为这个应用订制的css reset(你会发现通用文件越来越难hold住全站，原则是拆解、定制)</span></pre>
+</div>
+<div class="css-org-block">
+<ins class="css-org-label"><ins>组件层</ins></ins>
+  <pre class="css-org">
+|-- buttons.scss <span class="slide-item">通用UI元素－button</span>
+|-- font_icons.scss <span class="slide-item">通用UI元素－字体icon。适配性更强</span>
+|-- item.scss <span class="slide-item">通用UI元素－条目。</span>
+|-- progress_bar.css <span class="slide-item">通用UI元素－进度条</span>
+|-- tips.scss <span class="slide-item">通用UI元素－Tips</span>
+|-- list.scss <span class="slide-item">通用UI元素－列表</span>
+|-- layout_col2.scss <span class="slide-item">结构</span>
+|-- ui <span class="slide-item">JS组件的样式文件</span>
+|   |-- overlay.scss
+|   `-- tag_input.scss</pre>
+</div>
+<div class="css-org-block">
+<ins class="css-org-label"><ins>业务层</ins></ins>
+<pre class="css-org">
+|-- mod_create.scss <span class="slide-item">通用业务模块: mod_开头</span>
+|-- mod_edit_desc.scss
+|-- mod_gallery_info.scss
+|-- mod_gallery_intro.scss
+|-- mod_gallery_list.scss
+|-- mod_nav_list.scss
+|-- mod_picture_list.scss
+|-- mod_picture.scss
+|-- mod_publish.scss
+|-- mod_upload.scss
+|-- member_list.scss <span class="slide-item">特定页面用到的业务代码</span>
+|-- user_profile_head.scss
+`-- ui.scss <span class="slide-item">这个应用的全局css文件</span></pre>
+</div>
+</div>
+<i class="slide-item" data-action="$('.css-org-graph').addClass('css-org-graph-active')"></i>
+  </article>
+</div>
+
+
+
 
 <div class="page">
   <article>

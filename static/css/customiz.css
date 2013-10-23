@@ -223,6 +223,28 @@ body {
 
 .circle { display:none;position:absolute;width:6em;height:6em;border:3em solid rgba(0,0,0,.1);border-radius:100%; }
 
+.node { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -2em 0 0 -2em;
+  width: 4em;
+  height: 4em;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid #666;
+}
+
+.node i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  line-height: 1.4;
+  font-size: 1em;
+  font-style: normal;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+}
 
 .graph-process-old { height:5em; }
 .graph-process-old .role-designer { left:11em; }
@@ -250,10 +272,51 @@ body {
 .graph-process-new .circle1 { display:block;left:10em;top:-3em;width:16em;height:10em;border-color:rgba(0, 255, 46, .2); }
 .graph-process-new .circle2 { display:none !important; }
 
-
 .graph-process-circle .circle { display:block; }
 
+.css-org { margin:0; }
 .css-org span { color:blue; }
+
+.graph-design-process { margin-left: 2em; } 
+.graph-design-process .arrow0 { left:2em; }
+.graph-design-process .node0 { left:10em; }
+.graph-design-process .arrow1 { left:12em; }
+.graph-design-process .node1 { left:20em; }
+.graph-design-process .arrow2 { left:22em; }
+.graph-design-process .node2 { left:30em; }
+.graph-design-process .arrow3 { left:32em; }
+.graph-design-process .node3 { left:40em; }
+.graph-design-process .arrow4 { left:42em; }
+.graph-design-process .node4 { left:50em; }
+
+.css-org-graph .css-org-block {
+  display: flex;
+  -webkit-transition: all .5s;
+          transition: all .5s;
+}
+.css-org-graph .css-org-label {
+  display: flex;
+  flex: 1;
+  order: 1;
+  background: #eee;
+  justify-content: center;
+  opacity: 0;
+  -webkit-transition: all .5s;
+          transition: all .5s;
+}
+.css-org-graph .css-org-label ins {
+  align-self: center;
+}
+.css-org-graph .css-org-block .css-org {
+  flex: 3;
+}
+.css-org-graph-active .css-org-block {
+  margin: 10px 0;
+  border: 1px solid #aaa;
+}
+.css-org-graph-active .css-org-label {
+  opacity: 1;
+}
 
 .text-design {
   padding: 1em 0;
