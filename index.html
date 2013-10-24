@@ -107,7 +107,7 @@
     <p><a href="http://zh.wikipedia.org/wiki/%E7%94%9F%E5%91%BD">生命体基本特征</a>的类比：
     <ol class="list-1">
       <li>体内平衡 &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">这种自动调节指适配性。适配内容变化(文字长度、图片尺寸)、屏幕等各种情况</span></li>
-      <li>组织性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">UI可解构为UI元素的系统构成(原子设计、卡片设计)</span></li>
+      <li>组织性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">UI可解构为UI元素的系统构成(<a href="http://bradfrostweb.com/blog/post/atomic-web-design/" target="_blank">原子设计</a>、<a href="http://insideintercom.io/why-cards-are-the-future-of-the-web/" target="_blank">卡片设计</a>)</span></li>
       <li>新陈代谢 &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">新的UI元素不断替代旧的元素。保持整体设计的活力</span></li>
       <li>生长&emsp;&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">从最小可用形态(MVP)，跟随需求、不断迭代、持续完善</span></li>
       <li>适应性&emsp; &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot; <span class="slide-item">能适应用户的使用环境(响应式设计, RWD)</span></li>
@@ -428,8 +428,8 @@ ${istatic('/js/upload_pic.js')|n}
 
 <div class="page">
   <article>
-  <h2>还原LD - 响应性</h2>
-  <p class="slide-item">用户的使用环境：
+  <h2>还原LD - 分析用户的使用环境</h2>
+  <p class="slide-item">分析用户的使用环境：
   <div class="figure slide-item">
     <span class="subtitle">1. 浏览器: 高端浏览器 > 低端浏览器</span>
     <img src="static/pics/figure.1.png" alt="" />
@@ -450,18 +450,44 @@ ${istatic('/js/upload_pic.js')|n}
     <img src="static/pics/figure.5.png" alt="" />
   </div>
 
-  <p class="slide-item">谈响应式设计(RWD)不仅仅局限于页面布局，也不仅仅局限于手机、平板和桌面的适配。
-  <p class="slide-item">- 响应式设计指更好适应用户的使用环境。<br>
-  - Designer: 基本设计 ＋ 增强feature...
-  <br>- FE: 向前兼容。举例：
+  </article>
+</div>
+
+<div class="page">
+  <article>
+  <h2>还原LD - 响应式开发(1)</h2>
+  <div class="slide-item"><p>超越传统响应式开发
+    <div class="chart-rwd">
+      <img src="static/pics/figure.7.png"/>
+      <img src="static/pics/figure.8.png" class="slide-item" data-action="$('.chart-rwd img:nth-child(1)').hide();"/>
+    </div>
+  </div>
+  </article>
+</div>
+
+<div class="page">
+  <article>
+  <h2>还原LD - 响应式设计</h2>
+  <p class="slide-item">响应式设计(Responsive Web Design, WD)不仅仅局限于响应屏幕。本质上更好适应用户的使用环境。
+  <div class="figure slide-item">
+    <span class="subtitle">征服"全天候"产品设计</span>
+    <img src="http://static.panoramio.com/photos/large/86309841.jpg" width="60%" />
+    </div>
+  </article>
+</div>
+
+<div class="page">
+  <article>
+  <h2>设计图片上传</h2>
   <div class="figure slide-item" style="margin:1em 0 4em">
-    <span class="subtitle">豆瓣广播的发图</span>
+    <span class="subtitle">1. 多文件上传。如, 豆瓣广播的发图</span>
     <img src="static/pics/figure.upload.gif" alt="" />
     <p>高级feature: 原生MultipleUpload, DragDrop, Paste, 环形进度条
-    <p>基本：SWFUpload退化 + 基本UI
+    <p>基本：SWFUpload + 基本UI
   </div>
+
   <div class="figure slide-item" style="margin:1em 0 4em">
-    <span class="subtitle">A项目的发图</span>
+    <span class="subtitle">2. 单文件上传。A项目的发图</span>
     <img src="static/pics/figure.upload.1.gif" alt="" />
     <p>高级feature: 原生的单文件上传, 本地预览(ObjectURL), CSS3动画进度条 
     <p>基本：iframe上传 + 基本UI
@@ -478,32 +504,23 @@ ${istatic('/js/upload_pic.js')|n}
   </article>
 </div>
 
-<div class="page">
-  <article>
-  <h2>还原LD - 总结</h2>
-  <ol class="list-1">
-  <li>提出一个概念"Living Design"。什么是LD?它的特性? 
-  <li>帮助设计师思考设计实现 -- LD的设计思想
-  <li>围绕LD，重建产品实现环节的协作方式
-  <li>组件化系统和LD的组织性
-  <li>用户使用环境和LD的响应性
-  <li>渐进增强、向前兼容的设计和实现
-  </ol>
-</article>
-</div>
-
-
-
 <div class="page page-center">
   <article>
-  <p>Q & A
-  </article>
+  <blockquote style="-webkit-writing-mode:vertical-rl;"><p>制作东西，需要付出耐心和毅力，也在赋予物体以生命，可以说是一项崇高的工作，工作时更有触摸着实物而感受到活着的充实感。</p> - 安藤忠雄</blockquote> 
+</article>
 </div>
 
 
 <div class="page page-end">
   <article>
   <p>谢 谢!
+  </article>
+</div>
+
+
+<div class="page page-center">
+  <article>
+  <p>Q & A
   </article>
 </div>
 

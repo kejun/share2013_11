@@ -99,6 +99,7 @@ body {
 .page-center > article,
 .page-end > article {
   display: -webkit-flex;
+  display: flex;
   -webkit-justify-content: center;
   -webkit-align-items: center;
 }
@@ -290,24 +291,31 @@ body {
 .graph-design-process .node4 { left:50em; }
 
 .css-org-graph .css-org-block {
+  display: -webkit-flex;
   display: flex;
   -webkit-transition: all .5s;
           transition: all .5s;
 }
 .css-org-graph .css-org-label {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex: 1;
   flex: 1;
+  -webkit-order: 1;
   order: 1;
   background: #eee;
+  -webkit-justify-content: center;
   justify-content: center;
   opacity: 0;
   -webkit-transition: all .5s;
           transition: all .5s;
 }
 .css-org-graph .css-org-label ins {
+  -webkit-align-self: center;
   align-self: center;
 }
 .css-org-graph .css-org-block .css-org {
+  -webkit-flex: 3;
   flex: 3;
 }
 .css-org-graph-active .css-org-block {
@@ -326,4 +334,14 @@ body {
 
 .text-design i {
   font-style: normal;
+}
+
+.chart-rwd {
+  display: -webkit-flex;
+  display: flex;
+
+}
+
+.chart-rwd img {
+  width: 50em;
 }
