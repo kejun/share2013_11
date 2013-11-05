@@ -19,6 +19,14 @@ body {
   -webkit-transform: translate(-50%, -50%) scale(1) translateZ(0);
 }
 
+.cover-subtitle {
+  margin: 0;
+  font-size: .6em;
+  text-align:left;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
 .bn-toggle-gesture,
 .bn-toggle-fullscreen {
   color: #fff;
@@ -45,6 +53,8 @@ body {
   white-space: nowrap;
   color: #fff;
   border-radius: 5px;
+  font-size: 6em;
+  letter-spacing: .1em;
   text-shadow: 0 0 50px #fff;
 }
 
@@ -56,7 +66,7 @@ body {
 
 .page-cover .author {
   position: relative;
-  top: 6em;
+  top: 1em;
   color: #fff;
 }
 
@@ -278,18 +288,6 @@ body {
 .css-org { margin:0; }
 .css-org span { color:blue; }
 
-.graph-design-process { margin-left: 2em; } 
-.graph-design-process .arrow0 { left:2em; }
-.graph-design-process .node0 { left:10em; }
-.graph-design-process .arrow1 { left:12em; }
-.graph-design-process .node1 { left:20em; }
-.graph-design-process .arrow2 { left:22em; }
-.graph-design-process .node2 { left:30em; }
-.graph-design-process .arrow3 { left:32em; }
-.graph-design-process .node3 { left:40em; }
-.graph-design-process .arrow4 { left:42em; }
-.graph-design-process .node4 { left:50em; }
-
 .css-org-graph .css-org-block {
   display: -webkit-flex;
   display: flex;
@@ -345,3 +343,5 @@ body {
 .chart-rwd img {
   width: 50em;
 }
+
+.quote p { font-size:2em;margin:0 0 .2em 0; }
