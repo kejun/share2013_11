@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Reenie Beanie';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Reenie Beanie'), local('ReenieBeanie'), url(../fonts/reeniebeanie_v3.woff) format('woff');
+}
+
 body {
   color: #555;
   background-color: #ccc;
@@ -344,4 +351,6 @@ body {
   width: 50em;
 }
 
-.quote p { font-size:2em;margin:0 0 .2em 0; }
+.quote p { font-size:2.5em;font-family:'Reenie Beanie';margin:0 0 .2em 0; }
+.quote .from { text-align:right; }
+.quote b { color:navy; }
