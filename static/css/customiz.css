@@ -51,6 +51,7 @@ body {
 .col {
   display: inline-block;
   vertical-align: top;
+  text-align: left;
 }
 
 .page-cover .title {
@@ -354,3 +355,33 @@ body {
 .quote p { font-size:2.5em;font-family:'Reenie Beanie';margin:0 0 .2em 0; }
 .quote .from { text-align:right; }
 .quote b { color:navy; }
+
+
+.mac {
+  position: relative;
+  margin-top: 5em;
+  padding-top: 1.4em;
+  padding-bottom:6em;
+}
+
+.mac:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background:url(../pics/bg.2.png) no-repeat 50% 0; 
+  background-size: 80%;
+}
+
+.mac .subtitle {
+  position: absolute;
+  width: 100%;
+  top: -2em;
+  z-index: 1;
+}
+
+.mac .figure {
+  margin: .8em;
+}
