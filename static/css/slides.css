@@ -10,10 +10,6 @@ html, body {
   -webkit-backface-visibility: hidden;
 }
 
-.page article{
-  display: none;
-} 
-
 .page-cover article {
   position: relative;
 }
@@ -58,13 +54,6 @@ p {
 ::selection {
   background: midnightblue;
   color: #fff;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  .page article {
-    display: block;
-  } 
-  .no-support { display:none; }
 }
 
 .page { 
@@ -167,6 +156,7 @@ img {
 }
 
 .no-support {
+  display: none;
   position: absolute;
   width: 100%;
   top: 50%;

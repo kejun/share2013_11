@@ -29,10 +29,8 @@ $.each($('pre[data-src]'), function() {
 
 })();
 
-
 var current_num = location.href.split('?')[1]|0 || 0;
 var mode;
-
 var doc = $(document);
 var slides = $('.page'); 
 
@@ -106,17 +104,6 @@ doc.on('keyup', function(e) {
     showSlideItem(slides.eq(current_num));
   }
 })
-//.on('mousedown', function(e) {
-//  if (e.target.tagName === 'A') {
-//    return;
-//  }
-//  if (e.button === 0) {
-//    next();
-//  }
-//  else if (e.button === 1) {
-//    prev();
-//  }
-//})
 .swipeLeft(function() {
       next();
 })
@@ -157,15 +144,13 @@ $('.page').on('click', function(e) {
   if (e.target.tagName == 'A') {
     return;
   }
-  var page = $(this);
-  showSlideItem(page);
+  next();
 })
 .on('longTap', function(e) {
   if (e.target.tagName == 'A') {
     return;
   }
-  var page = $(this);
-  showSlideItem(page);
+  next();
 });
 
 
@@ -218,9 +203,16 @@ $('body').bind('webcamSwipeLeft', function() {
     next();
   }, 500);
 });
-$('body').bind('webcamSwipeRight', function() {
-  //swipeDelay && clearTimeout(swipeDelay);
-  //swipeDelay = setTimeout(function() {
-  //  prev();
-  //}, 1000);
-});
+//$('body').bind('webcamSwipeRight', function() {
+//swipeDelay && clearTimeout(swipeDelay);
+//swipeDelay = setTimeout(function() {
+//  prev();
+//}, 1000);
+//});
+
+if (!$.browser.webkit) {
+  $(function() {
+    $('.page article').hide();
+    $('.no-support').show();
+  });
+}
