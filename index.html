@@ -69,7 +69,7 @@
     <li class="slide-item">产品实现的特点：<span class="slide-item">展现形式多、新旧代码并存、业务逻辑复杂、迭代快、需求多变、兼容移动设备...</span>
     <li class="slide-item">产品实现的挑战：<span class="slide-item">产品设计和技术的紧密协作，体现为系统的设计和高灵活性的前端架构</span>
   </ul>
-  <p class="slide-item">传统按页面交付的合作模式 > 外包模式 > OUT!
+  <p class="slide-item">传统合作模式(按页面交付) > 外包模式 > OUT!
   <p class="slide-item">So, "活"的产品需要"活"的设计
   </article>
 </div>
@@ -78,7 +78,7 @@
 <div class="page">
   <article>
     <h2>对"活"的理解</h2>
-  <p class="slide-item">设计稿是“死”的、文档是“死”的，简单实现一个“死”的东西毫无价值
+  <p class="slide-item"><strong>还原设计，不是还原设计稿！</strong>设计稿是“死”的、文档是“死”的，简单实现一个“死”的东西毫无价值
   <div class="slide-item">
     <p><a href="http://zh.wikipedia.org/wiki/%E7%94%9F%E5%91%BD">生命体基本特征</a>的类比：
     <ol class="list-1">
@@ -132,11 +132,11 @@
 
 <p class="slide-item" data-action="setTimeout(function(){$('.graph-process-old').addClass('graph-process-circle');}, 100)">
 <ol class="list-1" style="list-style-type:upper-roman;">
-  <li class="slide-item">沉浸在各自的专业圈子里，自得其乐，交集越来越小。
-  <li class="slide-item">产品实现效率低，不是加人能解决的。人多不是协作，沦为劳动密集型
+  <li class="slide-item">沉浸在各自的专业圈子里，自得其乐，交集越来越小
+  <li class="slide-item">效率低，加人？人多不是协作，沦为劳动密集型，开启恶性循环
   <li class="slide-item">只对上面负责
 </ol>
-<p class="slide-item">改进：让环节重叠，后面努力影响前面。信息不均衡，低效的沟通。陷入无休止的争论<!--(塞叶法则Sayre’s Law)-->，挤占开发时间，牺牲细节
+<p class="slide-item">改进：提前参与产品设计？信息不均衡，沟通低效。陷入无休止的争论<!--(塞叶法则Sayre’s Law)-->，挤占开发时间，牺牲细节
 <p class="slide-item" data-action="setTimeout(function(){$('.graph-process-old').addClass('graph-process-new');}, 100);$('.text-mark2').html('4+5.产品实现');">继续改进：回到产品实现的根本目标上，产品实现的"黑盒"。
 </article>
 </div>
@@ -151,9 +151,9 @@
   <p>产品目标：提高发图量
   </div>
   <p class="slide-item" data-action="setTimeout(function(){$('#slide-figure-iteration').css('background-position','0 -10.6em')},0)">迭代1：验证结构调整
-  <p class="slide-item" data-action="setTimeout(function(){$('#slide-figure-iteration').css('background-position','0 -20.6em')},0)">迭代2：基于结构合理性，强化视觉
+  <p class="slide-item" data-action="setTimeout(function(){$('#slide-figure-iteration').css('background-position','0 -20.6em')},0)">迭代2：基于前面，强化视觉
 <div class="figure slide-item">
-<img src="http://ww2.sinaimg.cn/mw1024/61c4f47djw1du89llvmn4j.jpg" width="80%" />
+<img src="http://ww2.sinaimg.cn/mw1024/61c4f47djw1du89llvmn4j.jpg" width="70%" />
 </div>
 </article>
 </div>
@@ -170,7 +170,7 @@
   </div>
 
   <div class="figure figure-design-view1 slide-item" data-action="$('.figure-design-view').hide();">
-  <span class="subtitle">层次 x 规化 x 变化</span>
+  <span class="subtitle">有层次 x 有规律 x 有变化</span>
   <img src="static/pics/figure.11.png" width="80%" />
   </div>
 
@@ -181,7 +181,7 @@
   </div>
 </div>
 
-  <p class="slide-item">系统设计的核心：解构和组合。简而言之，解构到信息元素的最小粒度，设定它的属性和行为，再根据使用场景(page)有序的组织在一起。
+  <p class="slide-item">系统设计的核心：解构 + 组合 + 规化。简而言之，解构到信息元素的最小粒度，设定它的属性和行为，再根据使用场景(page)有序的组织在一起。
 </div>
   </article>
 </div>
@@ -219,7 +219,7 @@
 </div>
 
 <div class="figure slide-item">
-<span class="subtitle">转化到Mobile版</span>
+<span class="subtitle">轻松转化到Mobile版(RWD)</span>
 <img src="static/pics/figure.13.png" alt="" />
 </div>
   </article>
@@ -232,8 +232,8 @@
 <p>Most people make the mistake of thinking design is what it looks like.
 <p>People think it’s this veneer — that the designers are handed this box and told, "Make it look good!"
 <p>That’s not what we think design is.
-<p><b style="font-size:1.5em;">It’s not just what it looks like and feels like.</b> 
-<p><b style="font-size:1.5em;">Design is how it works.</b>
+<p><b style="font-size:1.2em;">It’s not just what it looks like and feels like.</b> 
+<p><b style="font-size:1.2em;">Design is how it works.</b>
 <p class="from">-- Steve Jobs
 </blockquote>
 </article>
@@ -274,7 +274,7 @@ SCSS:
 <h2>还原LD - HOWTO</h2>
 <ol class="list-1">
 <li class="slide-item">设计师要有LD的设计思维(前面所讲)
-<li class="slide-item">建立专业协作。 一个高效、紧密协作的工作流
+<li class="slide-item">再造协作流程
 <li class="slide-item">LD背后的开发观念
 <li class="slide-item">必备基础设施：组件化的静态文件管理系统
 <li class="slide-item">超越传统响应式开发
@@ -285,17 +285,17 @@ SCSS:
 
 <div class="page">
 <article>
-<h2>还原LD - 协作流程</h2>
+<h2>还原LD - 再造协作流程</h2>
 <p class="slide-item">案例分析: A项目(项目名称不便透露)的协作过程。
 <ol class="list-1">
-<li class="slide-item">PM写了一份简要的PRD，招集DesignerxEngineer review
-<li class="slide-item">根据产品目标，出wireframe，PMxDesigner之间review
-<li class="slide-item">最初的wireframe针对M1解决最主要的产品问题(MVP)
-<li class="slide-item">FExBE搭出第一版原型带测试数据，简陋的样式，尽可能少写JS/CSS，流程是同步的，且完整
-<li class="slide-item">基于原型。VDxID开始设计，一块一块的进行
-<li class="slide-item">开发上，前期着重于架构(基于组件的思想)，后期根据陆续出来的Design一块块的更新
-<li class="slide-item">细化实现过程，不陷在某个复杂的设计实现里，分步实现
-<li class="slide-item">M1上线前，设计已经开始M2的设计
+<li class="slide-item">PM写了一份简要的PRD，PM x Designer x Engineer Review
+<li class="slide-item">确定M1的目标，M1定义了MVP
+<li class="slide-item">根据M1，Designer出Wireframe，PM x Designer Review
+<li class="slide-item">根据M1，FE x BE出第1版原型。(有测试数据，无样式，尽可能少写JS/CSS，同步的流程)
+<li class="slide-item">基于原型，VD x ID开始系统设计(前面所述)。分块递交。PM能看到“生长”过程
+<li class="slide-item">M1的开发着重架构设计(基于组件的思想)，分层、分块实现
+<li class="slide-item">不陷在某个复杂的设计实现里，前面所述的迭代设计
+<li class="slide-item">阶梯式进展
 <li class="slide-item">好的协作：多种角色间，不断抛出问题，解决问题的过程
 <div class="figure">
 <span class="subtitle" style="font-size:1em;">马赫的共同演化设计实现模型</span>
@@ -321,37 +321,42 @@ SCSS:
 </article>
 </div>
 
+<div class="page">
+<article style="background:#000 url(static/pics/bg.3.jpg) no-repeat 50% -2em;background-size:auto 100%;">
+</article>
+</div>
+
 
 
 
 <div class="page">
   <article>
   <h2>还原LD - 组件化的静态文件管理系统(1)</h2>
-  <p class="slide-item">必备的基础设施。把"细胞"组织在一起，并顺利的"新陈代谢"(后期维护)
+  <p class="slide-item">必备的基础设施。把"细胞"组织在一起，健康与否取决"新陈代谢"(后期维护)
   <p class="slide-item">组件化，不单纯是模块化
-  <p class="slide-item">A项目(不便透露)中最复杂的......其实是一个"button"
+  <p class="slide-item">A项目(不便透露)中最复杂的部分......其实是一个"button"
   <p class="slide-item"><img src="static/pics/figure.19.png" valign="middle">
-  <div class="slide-item">简单部署到任何场景(page)下：
+  <div class="slide-item">可简单部署到任何场景(page)下：
   <pre><code class="language-markup"><%include file="/widgets/btn_publish.html" args="gallery=gallery" /></code></pre>
   </div>
-  <div class="slide-item">内部：
+  <div class="slide-item">内部：完整的组件不单单是JS、CSS、HTML
   <pre><code class="language-markup"><%block filter="collect_css">
-/* 依赖的CSS */ 
+/* 1. 依赖的CSS */ 
 ${istatic('/css/ui/overlay.css')|n}
 ${istatic('/css/mod_publish.css')|n}
 ${istatic('/css/tips.css')|n}
 ...
 &lt;/%block>
 &lt;%block filter="collect_js">
-// 依赖的Javascript 
+// 2. 依赖的Javascript 
 Do.ready(function() {
 ${istatic('/js/upload_pic.js')|n}
 });
 &lt;/%block>
 &lt;script type="text/template" id="tmpl-publish-picture">
-// 依赖的Javascript模板 
+// 3. 依赖的Javascript模板 
 &lt;/script>
-<!-- HTML: 包括各种状态 -->
+&lt;!-- 4. HTML --&gt;
 % if request.user:
   % if not gallery.is_member(request.user):
 &lt;a href="#" class="btn a_show_tips">发图&lt;/a>
@@ -373,11 +378,12 @@ ${istatic('/js/upload_pic.js')|n}
 <div class="page">
   <article>
   <h2>还原LD - 组件化的静态文件管理系统(2)</h2>
-   <p>静态文件管理系统的"刚需"：
+   <p>一个静态文件管理系统的"刚需"：
     <ol class="list-1">
-      <li>实现模块的独立性
+      <li>实现组件化 (想想完整组件的含义)
       <li>依赖管理
       <li>自动打包
+      <li>部署方式
       <li>支持CSS的预处理(SCSS/LESS/Stylus)
       <li>公共组件的包管理(构建一个更大更松散的生态体系)
     </ol>
@@ -480,6 +486,7 @@ ${istatic('/js/upload_pic.js')|n}
   <article>
   <h2>还原LD - 响应式设计</h2>
   <p class="slide-item">响应式设计(Responsive Web Design, WD)不仅仅局限于响应屏幕。本质上更好适应用户的使用环境。
+  <p class="slide-item">比如：上传图片
   </article>
 </div>
 
